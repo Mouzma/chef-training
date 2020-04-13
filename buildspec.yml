@@ -1,0 +1,8 @@
+version: 0.2
+
+ phases:
+   build:
+     commands:
+       - chefstyle .
+       - foodcritic . -t ~FC069 -t ~FC071 -t ~FC078
+       - kitchen test
